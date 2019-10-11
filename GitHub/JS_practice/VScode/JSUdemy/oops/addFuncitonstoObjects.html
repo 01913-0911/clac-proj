@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        User defined Object Creation using functions
+
+    </title>
+
+    
+    <script>
+        function blogpost(title,text){
+            this.title = title;
+            this.text = text;
+            this.addCategory = addCategory;
+
+        }
+
+        function addCategory(category){
+            this.category = category;
+        }
+
+        var bp1 = new blogpost("fvifecekjbeflkfe" , "112345678");
+        bp1.addCategory("JS practice")
+        document.write(bp1.title + "<br/>");
+        document.write(bp1.text + "<br/>");
+        document.write(bp1.category + "<br/>")
+
+        var bp2 = new blogpost("aaaaaaaa gaaaaa","doooo dooo dooo");
+        document.write(bp2.title + "<br/>");
+        document.write(bp2.text + "<br/>");
+    </script> 
+
+
+</head>
+<body>
+    
+</body>
+
+</html>

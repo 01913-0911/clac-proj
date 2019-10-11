@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Display Blog Details Function
+    </title>
+
+    
+    <script>
+        function blogpost(title,text){
+            this.title = title;
+            this.text = text;
+            this.addCategory = addCategory;
+            this.displayBlogpost = displayBlogpost;
+
+        }
+
+        function addCategory(category){
+            this.category = category;
+        }
+
+        function displayBlogpost(){
+        document.write(this.title + "<br/>");
+        document.write(this.text + "<br/>");
+        document.write(this.category + "<br/>")
+}
+
+        var bp1 = new blogpost("fvifecekjbeflkfe" , "112345678");
+        bp1.addCategory("JS practice")
+        document.write(bp1.title + "<br/>");
+        bp1.displayBlogpost();
+       
+       
+        var bp2 = new blogpost("aaaaaaaa gaaaaa","doooo dooo dooo");
+        bp2.addCategory("Push pineapple shake a tree");
+        bp2.displayBlogpost();
+    </script> 
+
+
+</head>
+<body>
+    
+</body>
+
+</html>

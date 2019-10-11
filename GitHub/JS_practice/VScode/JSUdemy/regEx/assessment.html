@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    Assessment 
+   </title>
+
+    
+    <script>
+        function validate(){
+            var expE = /^[A-Za-z0-9_\-\.]+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var exP = /^[0-9\-\.]{12}$/;
+
+            var email = document.myform.email.value;
+            var pwd = document.myform.pwd.value;
+            var phone = document.myform.phone.value;
+
+            var resEmail = expE.test(email);
+            var resPhone = expP.test(phone);
+
+
+            if (email.length ==""){
+                alert("Email is required");
+                document.myform.email.focus();
+                return false;
+            } else {
+                if (resEmail){
+                    alert("Email validation is successful");
+                }else {
+                    document.getElementById("err").innerHTML = "Please enter a valid email address";
+                    document.myform.email.focus();
+                    return false;
+                }
+            }
+            if (pwd.length ==""){
+                alert("Password is required");
+                document.myform.pwd.focus();
+                return false;
+            }
+            if (phone.length ==""){
+                alert("Phone number is required");
+                document.myform.phone.focus();
+                return false;
+            } else {
+                if (resPhone){
+                    alert("Phone number validation is successful");
+                }else {
+                    document.getElementById("err").innerHTML = "Please enter a valid phone number";
+                    document.myform.phone.focus();
+                    return false;
+                }
+            }
+        }
+        
+    </script> 
+
+
+</head>
+<body>
+    <h3>User Reg: </h3>
+    <form name = "myform" action = "dropdown.php" onsubmit="return validate()">
+        Email Address:<input type = "text" name = "email"></input>
+        <b id = "err"></b><br/>
+        Password: <input type = "text" name = "pwd"></input>
+        <b id = "err"></b><br/>
+        Phone: <input type = "text" name = "phone"></input>
+        <b id = "err"></b><br/>
+
+        <input type = "submit" value = "submit"/>
+    </form>
+</body>
+
+</html>

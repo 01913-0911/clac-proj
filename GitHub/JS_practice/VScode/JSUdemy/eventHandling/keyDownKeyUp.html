@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        On Key Down and On Key Up
+    </title>
+
+    <script>
+        function handleOnKeyDown(x){
+            x.style.color = "red";
+            x.style.backgroundColor = "blue";
+        }
+
+        function handleOnKeyUp(x) {
+            x.style.color = "blue";
+            x.style.backgroundColor = "red";
+        }
+
+        function handleOnKeyPress(x){
+            x.style.color = "pink";
+            x.style.backgroundColor = "orange";
+        }
+        </script> 
+
+
+</head>
+
+<body>
+    <input type = "text" onkeydown= "handleOnKeyDown(this)" onkeyup = "handleOnKeyUp(this)" onkeypress = "handleOnKeyPress(this)"/>
+    
+</body>
+
+</html>

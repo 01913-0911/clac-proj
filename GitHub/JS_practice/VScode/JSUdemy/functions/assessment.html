@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Assassment    
+    </title>
+
+    <script>
+
+function grade_calc(m,p,c){
+var avg=(p+m+c)/3;
+document.write("Average: "+avg+"<br/>");
+if(avg<70)
+document.write("Grade:  C");
+else if(avg<90)
+document.write("Grade:  B");
+else
+document.write("Grade:  A");
+}
+var x=parseInt(prompt("Enter marks in Mathematics"));
+var y=parseInt(prompt("Enter marks in Physics"));
+var z=parseInt(prompt("Enter marks in Chemistry"));
+grade_calc(x,y,z);
+
+</script>
+
+
+</head>
+
+</html>

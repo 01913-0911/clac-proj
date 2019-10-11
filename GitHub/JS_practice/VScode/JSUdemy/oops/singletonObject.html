@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Custom Singleton Object Creation
+    </title>
+
+    
+    <script>
+        var blogpost = new function(){
+            this.title = "Ruby on rails";
+            this.text = "Rapid web development";
+            this.displayDetails = function (){
+                document.write(this.title + "<br/>");
+                document.write(this.text);
+            }
+        }
+        blogpost.displayDetails();
+       
+    </script> 
+
+
+</head>
+<body>
+    
+</body>
+
+</html>

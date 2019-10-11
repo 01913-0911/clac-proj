@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    Validating Select Menus
+    </title>
+
+    
+    <script>
+        function validate(){
+            var color = document.myform.color.value;
+            if(color == ""){
+                alert("Please select a colour");
+                document.myform.color.focus();
+                return false;
+            } else {
+                alert("Validation is successful");
+                return true;
+            }
+            
+        }
+        
+    </script> 
+
+
+</head>
+<body>
+    <h3>Select a colour </h3>
+    <form name = "myform" action = "dropdown.php" onsubmit="return validate()">
+    <select name = "color">
+        <option value = "">Select a colour</option>
+        <option value = "blue">Blue</option>
+        <option value = "red">Red</option>
+        <option value = "purple">Purple</option>
+
+    </select>
+        <input type = "submit" value = "register"/>
+    </form>
+</body>
+
+</html>

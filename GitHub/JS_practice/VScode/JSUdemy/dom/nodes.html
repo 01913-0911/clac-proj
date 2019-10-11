@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    DOM: Create and Remove Nodes
+    </title>
+
+    
+    <script>
+        function handleRemove(){
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p2");
+            parent.removeChild(child);
+            
+        }
+    </script> 
+
+
+</head>
+<body>
+    <div id = "div1">
+        <p id = "p1">abcdefghijklmnop</p>
+        <p id = "p2">qrstuvwxyz1234567</p>
+    </div>
+    <input type = "button" value = "remove" onclick =
+    "handleRemove()">
+</body>
+
+</html>
